@@ -5009,7 +5009,7 @@ and \f$\omega\f$ switched,
 x(\omega) &= b\bigl(\sinh^{-1}\tan\omega'
 + e \tan^{-1}(e\sin\omega')\bigr),\\
 y(\beta) &= b\beta,\\
-m(\beta, \omega) &= \frac1{\cos\omega} \\
+m(\beta, \omega) &= \frac1{\sin\omega} \\
 x_0 &\rightarrow \infty, \\
 y_0 &= \tfrac12\pi b.
 \end{align}
@@ -5019,9 +5019,9 @@ y_0 &= \tfrac12\pi b.
 non-uniform limit depending on the parameter \f$k\f$,
 \f[
 \begin{align}
-  X &= b \sin\omega \sqrt{1 - k^2\sin^2\beta}, \\
-  Y &= b \cos\omega \cos\beta, \\
-  Z &= b \sin\beta \sqrt{1 - k'^2\sin^2\omega}.
+  X &= b \cos\omega \sqrt{1 - k^2\sin^2\beta}, \\
+  Y &= b \cos\beta \sin\omega, \\
+  Z &= b \sin\beta \sqrt{1 - k'^2\cos^2\omega}.
 \end{align}
 \f]
 Using https://dlmf.nist.gov/19.6.E13 the projection can be expressed as
@@ -5029,13 +5029,13 @@ Using https://dlmf.nist.gov/19.6.E13 the projection can be expressed as
 \begin{align}
 x(\omega) &= bF(\omega - \pi/2, k'), \\
 y(\beta) &= bF(\beta, k), \\
-m(\beta, \omega) &= \frac1{\sqrt{k'^2\cos^2\omega + k^2\cos^2\beta}}, \\
+m(\beta, \omega) &= \frac1{\sqrt{k^2\cos^2\beta + k'^2\sin^2\omega}}, \\
 x_0 &= bK(k'), \\
 y_0 &= bK(k),
 \end{align}
 \f]
 where \f$F(\phi,k)\f$ and \f$K(k)\f$ are incomplete and complete
-elliptic integral of the first kind, https://dlmf.nist.gov/19.2.E4 and
+elliptic integrals of the first kind, https://dlmf.nist.gov/19.2.E4 and
 https://dlmf.nist.gov/19.2.E8.
 Obtaining the limit of a sphere via an oblate (resp. prolate) ellipsoid
 corresponds to setting \f$k = 1\f$ (resp. \f$k
