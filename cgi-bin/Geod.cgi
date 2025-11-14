@@ -14,6 +14,7 @@ Content-type: text/html
     <title>Online geodesic calculator</title>
     <meta HTTP-EQUIV="Refresh"
           CONTENT="5; URL=https://geographiclib.sourceforge.io/cgi-bin/GeodSolve">
+    <meta name="robots" content="noindex" />
   </head>
   <body topmargin=10 leftmargin=10>
     <h3>

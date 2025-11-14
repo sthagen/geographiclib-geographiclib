@@ -903,12 +903,18 @@ also be used interactively, often with the input supplied via a pipe,
 e.g.,
  - echo 38SMB4488 | GeoConvert -d
 
-Online versions of four of these utilities are provided:
+Online versions of four of these utilities are provided.
+\warning SourceForge will cease supporting this capability
+at some point.  As an alternative, install %GeographicLib and run
+the utilities directly on your computer.
+
  - <a href="https://geographiclib.sourceforge.io/cgi-bin/GeoConvert">GeoConvert</a>
  - <a href="https://geographiclib.sourceforge.io/cgi-bin/GeodSolve">GeodSolve</a>
  - <a href="https://geographiclib.sourceforge.io/cgi-bin/Planimeter">Planimeter</a>
  - <a href="https://geographiclib.sourceforge.io/cgi-bin/GeoidEval">GeoidEval</a>
  - <a href="https://geographiclib.sourceforge.io/cgi-bin/RhumbSolve">RhumbSolve</a>
+ .
+
 
 <center>
 Back to \ref start.  Forward to \ref organization.  Up to \ref contents.
@@ -2613,7 +2619,7 @@ The contributions to the mean gravity are
 \begin{align}
 \langle \gamma_m \rangle &= \frac{4\pi}A GM, \\
 \langle \gamma_q \rangle &= 0 \quad \text{(as expected)}, \\
-\langle \gamma_r \rangle &= -\frac{4\pi}A \frac{2\omega^2 a^2b}3,\\
+\langle \gamma_r \rangle &= -\frac{4\pi}A \frac{2\omega^2 a^2b}3,
 \end{align}
 \f]
 resulting in
@@ -4936,14 +4942,14 @@ In particular, if we substitute values appropriate for the earth,
 \begin{align}
 a&=(6378137+35)\,\mathrm m,\\
 b&=(6378137-35)\,\mathrm m,\\
-c&=6356752\,\mathrm m,\\
+c&=6356752\,\mathrm m,
 \end{align}
 \f]
 we have
 \f[
 \begin{align}
 x_0 &= 1.5720928 \times b,\\
-y_0 &= 4.2465810 \times b.\\
+y_0 &= 4.2465810 \times b.      
 \end{align}
 \f]
 
@@ -5242,7 +5248,7 @@ are defined in terms of the geographical latitude \f$\phi\f$ by
 \f[
 \begin{align}
  \frac{d\psi}{d\phi} &= \frac{\rho}R, \\
- \frac{d\mu}{d\phi}  &= \frac{\pi}{2M}\rho, \\
+ \frac{d\mu}{d\phi}  &= \frac{\pi}{2M}\rho,
 \end{align}
 \f]
 where \f$\rho\f$ is the meridional radius of curvature, \f$R =
@@ -5796,7 +5802,7 @@ and to integrate this to give
 \sin\xi &= Q'(\phi) = -\sum_{l=0} (2l+1) Q_l \sin((2l+1)\phi),\\
 Q(\phi) &= \sum_{l=0} Q_l \cos((2l+1)\phi), \\
 S_{12} &= c^2\lambda_{12}
-\frac{Q(\phi_2) - Q(\phi_1)}{\phi_{12}}, \\
+\frac{Q(\phi_2) - Q(\phi_1)}{\phi_{12}},
 \end{align}
 \f]
 where \f$Q_l = O(n^l)\f$ is a series in \f$n\f$.  Here is the series
@@ -6922,7 +6928,7 @@ out to 4th order in <i>n</i>:
 +\bigl(\frac{5}{16}n^{2}-\frac{5}{96}n^{4}\bigr)\sin 4\mu
 +\frac{1}{32}n^{3}\sin 6\mu
 +\frac{283}{1536}n^{4}\sin 8\mu
-+\ldots\\
++\ldots
 \end{align}
 \f]
 
@@ -7019,7 +7025,7 @@ to 3rd order in <i>n</i>:
 -\bigl(\frac{2}{3}n-\frac{34}{45}n^{2}+\frac{88}{315}n^{3}\bigr)\sin 2\xi
 +\bigl(\frac{1}{45}n^{2}-\frac{184}{945}n^{3}\bigr)\sin 4\xi
 -\frac{106}{2835}n^{3}\sin 6\xi
--\ldots\\
+-\ldots
 \end{align}
 \f]
 
@@ -7852,11 +7858,14 @@ git repository for GeographicLib</a>.
 
  - <a href="https://geographiclib.sourceforge.io/C++/2.5.2">Version 2.5.2</a>
    (released 2025-08-22)
-   - Fix potential buffer overflow in DMS.  Upgrading from earlier
-     versions is <b>strongly</b> recommended.  If upgrading is not
-     possible, avoid processing untrusted or malformed inputs and run
-     programs linked to the library with restricted privileges.  Thanks
-     to Rosario Matteo Grammatico for finding this vulnerability.
+
+   - Fix potential buffer overflow in DMS; see
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-60751">
+     CVE-2025-60751</a>.  Upgrading from earlier versions is
+     <b>strongly</b> recommended.  If upgrading is not possible, avoid
+     processing untrusted or malformed inputs and run programs linked to
+     the library with restricted privileges.  Thanks to Rosario Matteo
+     Grammatico for finding this vulnerability.
 
  - <a href="https://geographiclib.sourceforge.io/C++/2.5.1">Version 2.5.1</a>
    (released 2025-08-20)

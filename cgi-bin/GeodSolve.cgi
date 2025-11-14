@@ -120,6 +120,7 @@ cat <<EOF
                    online calculator,
                    WGS84 ellipsoid,
                    GeographicLib" />
+    <meta name="robots" content="noindex" />
   </head>
   <body>
     <h3>
@@ -127,6 +128,16 @@ cat <<EOF
       <a href="https://geographiclib.sourceforge.io/C++/doc/GeodSolve.1.html">
          GeodSolve</a> utility
     </h3>
+    <p style="background-color: lightyellow;
+              color: darkred;
+              padding: 15px;
+              border: 2px solid darkblue;
+              border-radius: 4px;
+              margin-bottom: 15px;">
+      <b>WARNING:</b> SourceForge will cease supporting this capability
+      at some point.  As an alternative, install GeographicLib and run
+      the utility directly on your computer.
+    </p>
     <form action="/cgi-bin/GeodSolve" method="get">
       <p>
         Geodesic calculation:
